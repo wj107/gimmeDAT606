@@ -1,5 +1,10 @@
 ---
-title: "gimmeDAT606"
+title: "Welcome to gimmeDAT606"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
 author: "wj107"
 date: "March 7, 2019"
 output: html_document
@@ -9,7 +14,6 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Welcome to gimmeDAT606
 
 ### Why
 
