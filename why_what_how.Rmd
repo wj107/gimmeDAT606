@@ -1,0 +1,40 @@
+---
+title: "gimmeDAT606"
+author: "wj107"
+date: "March 7, 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Welcome to gimmeDAT606
+
+### Why
+
+Thinking by the thousands.  Welcome to the new math.  Understanding data.  How to see it, how to think about it.  How to see stories in data.  
+
+I taught high school math for a decade in the 2000s.  Most of the problems were irrelevant -- the details of the quadratic equations, for example -- but I tried to emphasize process, to underscore the value of analytical thinking.
+
+\[ x=\frac{-b \pm \sqrt{b^2-4ac}}{2a} \]
+###how do I caption this???
+
+But I was blindly loyal to those irrelevant math concepts.  It was job security for me, after all.
+
+Tuned into trends in education moving towards alternative curriculums during my job in the 2010s, my loyalty to those concepts dried up.  Partly practical -- I saw the paradigm shift in education coming, and I recognize the benefits (and challenges!) to being on the front end.  Partly on principle.  The irrelevance of those traditional high school math concepts, in the face of so many quantitative topics central to the twenty-first century world -- data science, predictive analysis -- meant that my loyalty to, say, factoring polynomials was doing my students a disservice.
+
+```{r graph1, echo=FALSE}
+require(ggplot2)
+dat<-data.frame(
+  x=rnorm(1e3),
+  y=rnorm(1e3),
+  z=sample(c("M","F"),1e3,T,c(.8,.2))
+)
+ggplot(
+ dat,
+ aes(x,y,color=z)
+)+
+  geom_point(alpha=1/2)
+```
+
